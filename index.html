@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="librerias/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="librerias/css/menu.css">
+    <title>Grupo Metropolis</title>
+    <link rel="icon" type="image/png"  href="librerias/imagenes/icono.jpg">
+</head>
+<body>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+            
+                <!-- Icon -->
+                    <div class="fadeIn first py-5">
+                        <img src="librerias/imagenes/zyro-image.png " width="15%" height="25% mb-5" />
+                        <h3>Ingreso</h3>
+                    </div>
+                
+                    <!-- Login Form -->
+                    <form id="frmIngreso" method="post" onsubmit="return IngresoUsuario()">
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="usuario" required>
+                        <input type="password" id="password" class="fadeIn third" name="password" placeholder="contraseña" required>
+                        <input type="submit" class="fadeIn fourth" value="ingresar">
+                    </form>
+                
+                    <!-- Remind Passowrd -->
+                    <div id="formFooter">
+                        <a class="underlineHover" href="#" data-toggle="modal" data-target="#modalContacto">Contactar administrador</a>
+                    </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Contacto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            si no tiene registro helpdesk llama a la extension : 204
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        
+            </div>
+        </div> 
+        <script src="librerias/jquery/jquery-3.6.0.min.js"></script>
+        <script src="librerias/bootstrap/popper.min.js"></script>
+        <script src="librerias/bootstrap/bootstrap.min.js"></script>
+        <script src="librerias/sweetalert2/sweetalert2@11.js"></script>
+        <script src="librerias/js/usuarios/ingreso.js"></script>
+</body>
+</html>
