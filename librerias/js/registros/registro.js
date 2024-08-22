@@ -92,17 +92,21 @@ function datos_factura(){
             url: `http://metrocosta.ddns.net:8080/metropolis/api/inventarios/logistica/consultar_datos_documento/${cod_almacen}/${tipo_documento}/${prefijo}/${factura}`,
             success:function(respuesta){
                 console.log(respuesta);
-                $('#valor').val(respuesta['valor_documento']);
-                $('#nit_vendedor').val(respuesta['nit_vendedor']);
-                $('#vendedor').val(respuesta['vendedor']);
-                $('#cedula').val(respuesta['nit']);
-                $('#nombre').val(respuesta['razon_social']);
-                $('#direccion').val(respuesta['direccion']);
-                $('#telefono').val(respuesta['telefono']);
-                $('#zona').val(respuesta['zona']);
-                $('#peso').val(Number(respuesta['peso']));
-                $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
-                $('#fecha').val(respuesta['fecha'].substring(0,10));
+                if(respuesta != null){
+                    $('#valor').val(respuesta['valor_documento']);
+                    $('#nit_vendedor').val(respuesta['nit_vendedor']);
+                    $('#vendedor').val(respuesta['vendedor']);
+                    $('#cedula').val(respuesta['nit']);
+                    $('#nombre').val(respuesta['razon_social']);
+                    $('#direccion').val(respuesta['direccion']);
+                    $('#telefono').val(respuesta['telefono']);
+                    $('#zona').val(respuesta['zona']);
+                    $('#peso').val(Number(respuesta['peso']));
+                    $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
+                    $('#fecha').val(respuesta['fecha'].substring(0,10));
+                }else{
+                    Swal.fire("):","Revice los datos genere una nueva busqueda!","warning");
+                }
             }
         });
     } else if (tipo_documento === 'traslado' || tipo_documento === 'sai') {
@@ -112,17 +116,22 @@ function datos_factura(){
             url: `http://metrocosta.ddns.net:8080/metropolis/api/inventarios/logistica/consultar_datos_traslado/${cod_almacen}/${tipo_documento}/${prefijo}/${factura}`,
             success:function(respuesta){
                 console.log(respuesta);
-                $('#valor').val(respuesta['valor_documento']);
-                $('#nit_vendedor').val(respuesta['nit_vendedor']);
-                $('#vendedor').val(respuesta['vendedor']);
-                $('#cedula').val(respuesta['nit']);
-                $('#nombre').val(respuesta['razon_social']);
-                $('#direccion').val(respuesta['direccion']);
-                $('#telefono').val(respuesta['telefono']);
-                $('#peso').val(Number(respuesta['peso']));
-                $('#detalle').val(respuesta['detalle']);
-                $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
-                $('#fecha').val(respuesta['fecha'].substring(0,10));
+                if(respuesta != null){
+                    $('#valor').val(respuesta['valor_documento']);
+                    $('#nit_vendedor').val(respuesta['nit_vendedor']);
+                    $('#vendedor').val(respuesta['vendedor']);
+                    $('#cedula').val(respuesta['nit']);
+                    $('#nombre').val(respuesta['razon_social']);
+                    $('#direccion').val(respuesta['direccion']);
+                    $('#telefono').val(respuesta['telefono']);
+                    $('#peso').val(Number(respuesta['peso']));
+                    $('#detalle').val(respuesta['detalle']);
+                    $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
+                    $('#fecha').val(respuesta['fecha'].substring(0,10));
+                }else{
+                    Swal.fire("):","Revice los datos genere una nueva busqueda!","warning");
+                }
+                
             }
         });
     }
