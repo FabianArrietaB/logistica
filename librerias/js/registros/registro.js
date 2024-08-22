@@ -131,7 +131,6 @@ function datos_factura(){
                 }else{
                     Swal.fire("):","Revice los datos genere una nueva busqueda!","warning");
                 }
-                
             }
         });
     }
