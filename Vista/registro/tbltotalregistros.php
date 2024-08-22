@@ -22,12 +22,15 @@ $respuesta = mysqli_query($conexion, $sql);
                     <h2>INFORMACION POR SEDE</h2>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body item-center">
                 <div class="row student text-center">
                     <?php
                         while($mostrar= mysqli_fetch_array($respuesta)){
+                            if($mostrar['tipo_documento'] == ""){
+                                $mostrar['tipo_documento'] = "Vacio";
+                            }
                     ?>
-                    <div class="col-3">
+                    <div class="col-3 mb-3">
                         <div class="list-group">
                             <li class="list-group-item list-group-item-action active"><?= $mostrar['tipo_documento'] . ' - ' . $mostrar['registros'] ?></li>
                             <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -38,6 +41,7 @@ $respuesta = mysqli_query($conexion, $sql);
                                     <?php echo $mostrar['registrados']; ?>
                                 </span></h5>
                             </li>
+                            <br>
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
                                     <div class="fw-bold">PROGRAMADOS</div>
@@ -46,6 +50,7 @@ $respuesta = mysqli_query($conexion, $sql);
                                     <?php echo $mostrar['programados']; ?>
                                 </span></h5>
                             </li>
+                            <br>
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
                                     <div class="fw-bold">ENVIADOS</div>
