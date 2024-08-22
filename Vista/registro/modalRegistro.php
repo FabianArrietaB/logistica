@@ -158,7 +158,6 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button"  class="btn btn-warning" onclick="datos_factura()">Consultar</button>
         <button type="button" class="btn btn-primary" onclick="agregarNuevoRegistro()">Registrar</button>
       </div>
     </div>

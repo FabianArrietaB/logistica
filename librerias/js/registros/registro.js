@@ -2,6 +2,11 @@ $(document).ready(function(){
     $('#tablaRegistroLoad').load("registro/tablaRegistro.php");
 });
 
+$('#almacen').keypress(function(e) {
+    if(e.which == 13) {
+        datos_factura();
+    }
+});
 
 function agregarNuevoRegistro(){
     $.ajax({
@@ -41,7 +46,6 @@ function obtenerEstadoProgramado(idRegistro){
                 respuesta = jQuery.parseJSON(respuesta);
                 $('#prefijou').val(respuesta['prefijo']);
                 $('#facturau').val(respuesta['factura']);
-                    
             }
         });
 }

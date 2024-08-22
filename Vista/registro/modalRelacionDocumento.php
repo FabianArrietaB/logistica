@@ -11,75 +11,53 @@
         </button>
       </div>
       <div class="modal-body">
-        
-      <div class="row">
+        <div class="row">
           <div class="col-sm-6">
               <label >Conductor</label>
-             
               <select name="idConductor" id="idConductor" class="form-control" required>
                 <option value="">Asignar conductor</option>
-               
-                  <option value="">
-                  </option>
-            
+                  <option value=""></option>
               </select>
           </div>
 
           <div class="col-sm-6">
               <label >Ayudante</label>
-             
               <select name="idAyudante" id="idAyudande" class="form-control" required>
                 <option value="">Asignar ayudante</option>
-                
-                  <option value="">
-                </option>
-                
+                <option value=""></option>
               </select>
           </div>
 
           <div class="col-sm-6">
               <label >Zona</label>
-              
-                 
               <select name="idZona" id="idZona" class="form-control" required>
                 <option value="">Asignar zona</option>
-                
                   <option value=""></option>
-                
               </select>
           </div>
 
           <div class="col-sm-6">
               <label >Clasificacion</label>
-              
               <select name="idCarga" id="idCarga" class="form-control" required>
                 <option value="">Asignar clasificacion</option>
-            
                   <option value=""></option>
-                
               </select>
           </div>
       </div>
 
       <div class="row">
                 <input type="text" id="idRegistro" name="idRegistro" hidden>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="prefijoup">Prefijo</label>
                     <input id="prefijoup" name="prefijoup" type="text" class="form-control" readonly>
                 </div>
-            </div>
-
             
-
-            <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="facturaup">Factura</label>
                     <input id="facturaup" name="facturaup" type="text" class="form-control" readonly>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
+            
+                <div class="col-sm-4">
                     <label for="estadoup">Estado</label>
                     <input id="estadoup" name="estadoup" type="text" class="form-control" value="enviado" readonly>
                 </div>

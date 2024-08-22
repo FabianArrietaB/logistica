@@ -115,33 +115,23 @@
       </div>
 
       <div class="row">
-                <input type="text" id="idRegistro" name="idRegistro" hidden>
-                <div class="col-sm-6">
-                    <label for="prefijoup">Prefijo</label>
-                    <input id="prefijoup" name="prefijoup" type="text" class="form-control" readonly>
-                </div>
-            </div>
+        <input type="text" id="idRegistro" name="idRegistro" hidden>
+          <div class="col-sm-4">
+              <label for="prefijoup">Prefijo</label>
+              <input id="prefijoup" name="prefijoup" type="text" class="form-control" readonly>
+          </div>
+          <div class="col-sm-4">
+              <label for="facturaup">Factura</label>
+              <input id="facturaup" name="facturaup" type="text" class="form-control" readonly>
+          </div>
 
-            
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="facturaup">Factura</label>
-                    <input id="facturaup" name="facturaup" type="text" class="form-control" readonly>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="estadoup">Estado</label>
-                    <input id="estadoup" name="estadoup" type="text" class="form-control" value="enviado" readonly>
-                </div>
-            </div>
-
-          
+          <div class="col-sm-4">
+              <label for="estadoup">Estado</label>
+              <input id="estadoup" name="estadoup" type="text" class="form-control" value="enviado" readonly>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button class="btn btn-primary" >Enviar</button>
       </div>
     </div>

@@ -12,28 +12,21 @@
       <div class="modal-body">
             <input type="text" id="idRegistro" name="idRegistro" hidden>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="prefijou">Prefijo</label>
                     <input id="prefijou" name="prefijou" type="text" class="form-control" readonly>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="facturau">Factura</label>
                     <input id="facturau" name="facturau" type="text" class="form-control" readonly>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="estadou">Estado</label>
                     <input id="estadou" name="estadou" type="text" class="form-control" value="programado" readonly>
                 </div>
             </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button class="btn btn-primary" >Enviar</button>
       </div>
     </div>
