@@ -120,6 +120,11 @@
                 <label for="peso">Peso</label>
                 <input id="peso" name="peso" type="text" class="form-control" required readonly>
             </div>
+
+            <div class="col-sm-12">
+                <label for="detalle">Observacion</label>
+                <input id="detalle" name="detalle" type="text" class="form-control" required readonly>
+            </div>
         </div>
 
         <div class="row">

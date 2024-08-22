@@ -101,7 +101,7 @@ function datos_factura(){
                 $('#fecha').val(respuesta['fecha'].substring(0,10));
             }
         });
-    } else if (tipo_documento === 'traslado') {
+    } else if (tipo_documento === 'traslado' || tipo_documento === 'sai') {
         $.ajax({
             type: "GET",
             data: {},
@@ -115,6 +115,8 @@ function datos_factura(){
                 $('#nombre').val(respuesta['razon_social']);
                 $('#direccion').val(respuesta['direccion']);
                 $('#telefono').val(respuesta['telefono']);
+                $('#peso').val(Number(respuesta['peso']));
+                $('#detalle').val(respuesta['detalle']);
                 $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
                 $('#fecha').val(respuesta['fecha'].substring(0,10));
             }

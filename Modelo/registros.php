@@ -425,33 +425,5 @@
 
         }
 
-        public function datos_traslado($tipodocumento, $codalmacen, $prefijo, $factura){
-            $con = new Conexion();
-            if($tipodocumento === 'traslado'){
-                $movimiento = '55';
-            }else if($tipodocumento === 'sai'){
-                $movimiento = '56';
-            }
-            $numero = '%' . $factura;
-            $sql = $con->conectarMetroapp()->prepare("SELECT DISTINCT
-                v.VEN_CEDULA cedula,
-                mi.MOV_PREFIJ prefi,
-                mi.MOV_NUMDOC documento,
-                mi.MOV_CODOPE vendedor,
-                mi.MOV_CEDULA nit,
-                mid.MOV_FECHA  fecha,
-                ROUND(SUM(mid.MOV_VALOR),0,2) valor_documento,
-                a.ALM_NOMBRE  razon_social,
-                a.ALM_DIRECC direccion
-            FROM METROAPP.dbo.movimientos_inventario mi
-            LEFT JOIN METROCERAMICA.dbo.MAEALM a ON a.ALM_CODIGO =  mi.MOV_BODEGA
-            LEFT JOIN METROCERAMICA.dbo.MAEVEN v ON v.VEN_NOMBRE = mi.MOV_VENDED 
-            LEFT JOIN METROAPP.dbo.movimientos_inventario_detalle mid ON mi.MOV_PREFIJ = mid.MOV_PREFIJ AND mi.MOV_NUMDOC = mid.MOV_NUMDOC
-            WHERE mid.MOV_TIPMOV = ? AND mi.MOV_PREFIJ = ? AND mi.MOV_NUMDOC LIKE ? AND mi.MOV_BODEGA = ?
-            GROUP BY v.VEN_CEDULA, mi.MOV_PREFIJ, mi.MOV_NUMDOC, mi.MOV_CODOPE, mi.MOV_CEDULA, mid.MOV_FECHA, a.ALM_NOMBRE, a.ALM_DIRECC, mi.MOV_TIPMOV");
-            $sql->execute(array($movimiento, $prefijo, $numero, $codalmacen));
-            $data = $sql->fetchAll(PDO::FETCH_ASSOC);
-            return $data;
-        }
 
     }
