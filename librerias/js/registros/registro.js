@@ -104,9 +104,8 @@ function datos_factura(){
     } else if (tipo_documento === 'traslado') {
         $.ajax({
             type: "GET",
-            data : "tipodocumento=" + tipo_documento + "&codalmacen=" + cod_almacen + "&prefijo=" + prefijo + "&factura=" + factura,
-            url: `../Controlador/registros/traslados.php`,
-            dataType: 'json',
+            data: {},
+            url: `http://metrocosta.ddns.net:8080/metropolis/api/inventarios/logistica/consultar_datos_traslado/${cod_almacen}/${tipo_documento}/${prefijo}/${factura}`,
             success:function(respuesta){
                 console.log(respuesta);
                 $('#valor').val(respuesta['valor_documento']);
@@ -115,6 +114,7 @@ function datos_factura(){
                 $('#cedula').val(respuesta['nit']);
                 $('#nombre').val(respuesta['razon_social']);
                 $('#direccion').val(respuesta['direccion']);
+                $('#telefono').val(respuesta['telefono']);
                 $('#fecha_documento').val(respuesta['fecha'].substring(0,10));
                 $('#fecha').val(respuesta['fecha'].substring(0,10));
             }
