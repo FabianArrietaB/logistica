@@ -1,8 +1,7 @@
 <?php include "header.php";
         if(isset($_SESSION['usuarios']) && 
         $_SESSION['usuarios']['rol']==1){
-        
-        ?>
+?>
 
 <div class="container">
     <div class="card border-0 shadow my-5">

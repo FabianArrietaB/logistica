@@ -1,8 +1,9 @@
 <?php
-
+session_start();
 include "../../Modelo/Conexion.php";
 $con = new Conexion();
 $conexion = $con->conectar();
+$bodega = $_SESSION['usuarios']['almacen'];
 $contador = 1;
 $sql="SELECT
     tipo_documento,
@@ -17,11 +18,7 @@ $sql="SELECT
 $respuesta = mysqli_query($conexion, $sql);
 ?>
 <div class="card border-primary">
-            <div class="card-header text-center">
-                <div class="title">
-                    <h2>INFORMACION POR SEDE</h2>
-                </div>
-            </div>
+            
             <div class="card-body item-center">
                 <div class="row student text-center">
                     <?php
