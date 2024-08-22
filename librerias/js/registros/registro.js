@@ -14,7 +14,7 @@ function agregarNuevoRegistro(){
         data: $('#frmAgregarRegistro').serialize(),
         url:"../Controlador/registros/agregarNuevoRegistro.php",
         beforeSend: function(){
-               document.getElementById('off').disabled = true 
+            document.getElementById('off').disabled = true 
         },
         complete: function(){
             document.getElementById('off').disabled = false 
@@ -109,7 +109,7 @@ function datos_factura(){
                 }
             }
         });
-    } else if (tipo_documento === 'traslado' || tipo_documento === 'sai') {
+    } else if (tipo_documento === 'traslado' || tipo_documento === 'salida') {
         $.ajax({
             type: "GET",
             data: {},

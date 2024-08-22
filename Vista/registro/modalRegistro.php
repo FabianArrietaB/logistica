@@ -25,7 +25,7 @@
                     <option value="factura">FACTURA</option>
                     <option value="remision">REMISION</option>
                     <option value="traslado">TRASLADO</option>
-                    <option value="sai">SALIDA</option>
+                    <option value="salida">SALIDA</option>
                     <option value="ordenCompra">ORDEN COMPRA</option>
                 </select>
             </div>
