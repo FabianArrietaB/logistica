@@ -66,6 +66,19 @@ session_start();
 
 <script>
     $(document).ready(function(){
-        $('#tablaProgramarRegistrosadminDataTable').DataTable();
+        $('#tablaProgramarRegistrosadminDataTable').DataTable(
+          {
+                "language": {
+                    "sEmptyTable":    "Ningún dato disponible en esta tabla",
+                    "sInfoEmpty":     "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "oPaginate": {
+                        "sFirst":   "Primero",
+                        "sLast":    "Último",
+                        "sNext":    ">",
+                        "sPrevious": "<"
+                    },
+                }
+            }
+        );
     });
 </script>

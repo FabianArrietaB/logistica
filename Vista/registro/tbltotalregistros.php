@@ -35,10 +35,11 @@ $respuesta = mysqli_query($conexion, $sql);
     <div class="card-body item-center">
         <div class="row student text-center">
             <?php
-                while($mostrar= mysqli_fetch_array($respuesta)){
-                if($mostrar['tipo_documento'] == ""){
-                    $mostrar['tipo_documento'] = "Vacio";
-                }
+                if(mysqli_num_rows($respuesta) > 0){
+                    while($mostrar= mysqli_fetch_array($respuesta)){
+                    if($mostrar['tipo_documento'] == ""){
+                        $mostrar['tipo_documento'] = "Vacio";
+                    }
             ?>
             <div class="col-3 mb-3">
                 <div class="list-group">
@@ -87,6 +88,10 @@ $respuesta = mysqli_query($conexion, $sql);
                     </li>
                 </div>
             </div>
+            <?php }} else { ?>
+                <div class="card-body text-center">
+                    <h6 class="fw-light">NO HAY REGISTROS</h6>
+                </div>
             <?php }?>
         </div>
     </div>
