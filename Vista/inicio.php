@@ -9,7 +9,6 @@
             <div class="card-body p-5 text-center">
                 <h1 class="fw-light">ESTADISTICAS</h1>
                 <div id="tablaRegistros"></div>
-
             </div>
         </div>
     </div>
