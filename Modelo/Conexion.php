@@ -2,18 +2,18 @@
     class Conexion{
             public function conectar(){
                 $servidor = "localhost";
-                $usuario = "root";
+                $usuario = "";
                 $password = "";
-                $db = "despacho_logistica";
+                $db = "";
                 $conexion = mysqli_connect($servidor, $usuario, $password, $db);
                 return $conexion;
             }
 
             public function conectarMetroapp(){
                 $servidor = "SERVIDOR";
-                $usuario  = "consulta";
-                $password = "Sistema2024";
-                $db       = "METROAPP";
+                $usuario  = "";
+                $password = "";
+                $db       = "";
                 try {
                    $conexion = new PDO("sqlsrv:server=$servidor;database=$db", $usuario, $password);
                    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
